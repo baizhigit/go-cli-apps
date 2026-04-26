@@ -14,6 +14,10 @@ func main() {
 }
 
 func countWords(data []byte) int {
+	if len(data) == 0 {
+		return 0
+	}
+
 	wordCount := 0
 
 	for _, v := range data {
