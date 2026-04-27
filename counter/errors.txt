@@ -1,0 +1,2 @@
+failed to read file: open ./noexist.txt: no such file or directory
+exit status 1
