@@ -7,7 +7,10 @@ import (
 )
 
 func main() {
-	data, _ := os.ReadFile("./words.txt")
+	data, err := os.ReadFile("./words.txt")
+	if err != nil {
+		os.Exit(1)
+	}
 
 	wordCount := CountWords(data)
 
