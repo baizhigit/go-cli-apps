@@ -49,3 +49,8 @@ func Countlines(r io.Reader) int {
 
 	return linesCount
 }
+
+func CountBytes(r io.Reader) int {
+	byteCount, _ := io.Copy(io.Discard, r)
+	return int(byteCount)
+}
